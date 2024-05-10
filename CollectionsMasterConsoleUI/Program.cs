@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.Linq;
 
 namespace CollectionsMasterConsoleUI
 {
@@ -104,6 +106,8 @@ namespace CollectionsMasterConsoleUI
 
         private static void ThreeKiller(int[] numbers)
         {
+            numbers = numbers.Where(x => x % 3 != 0).ToArray();
+            Console.WriteLine(numbers);
             
         }
 
